@@ -129,6 +129,7 @@ export default {
       evt.preventDefault()
       var gaetan = this.form;
       this.form.email = this.form.email.replace(".","");
+      this.form.titre = this.form.titre.replace(".","");
       alert(JSON.stringify(gaetan))
       console.log(gaetan)
       db.ref('Film:'+(this.form.titre) + ' '+ (this.form.id)+'/'+(""+this.form.email)+'/')
