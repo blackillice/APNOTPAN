@@ -11,8 +11,8 @@ Un utilisateur est identifié par son mail dans la BDD est ne peut donc donner q
 
 a Implementer pour la suite :
 
-Barre de recherche pour obtenir un film recherché 
-mise en place des autres pages ( 50 pages disponible , 1 seule a été implementé pour l'instant ) 
-page dedié a l'affichage des critiques ( trié par film ? )
-refonte graphique generale ( aspect pour le moment tres basique ) 
+1.Barre de recherche pour obtenir un film recherché 
+2.mise en place des autres pages ( 50 pages disponible , 1 seule a été implementé pour l'instant ) 
+3.page dedié a l'affichage des critiques ( trié par film ? )
+4.refonte graphique generale ( aspect pour le moment tres basique ) 
 
