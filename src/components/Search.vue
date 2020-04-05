@@ -29,7 +29,7 @@
                 <div>
                   <b-form @submit="onSubmit" @reset="onReset" >
 
-                    <input type="text" name="form.id"  readonly :value="result.id">
+                    <!-- <input type="text" name="form.id"  readonly :value="result.id"> -->
                     
                     
                     
@@ -78,9 +78,9 @@
                     <b-button type="submit" v-on:click="onyoloaxe(result.id,result.title)" variant="primary">Submit</b-button>
                     <b-button type="reset" variant="danger">Reset</b-button>
                   </b-form>
-                  <b-card class="mt-3" header="Form Data Result">
+                  <!-- <b-card class="mt-3" header="Form Data Result">
                     <pre class="m-0">{{ form }}</pre>
-                  </b-card>
+                  </b-card> -->
                 </div>
 
 
@@ -120,7 +120,6 @@ export default {
 
   methods: {
     onyoloaxe(idfilm,titlefilm){
-      console.log(idfilm)
       this.form.id = idfilm ;
       this.form.titre = titlefilm;
     
@@ -130,12 +129,11 @@ export default {
       var gaetan = this.form;
       this.form.email = this.form.email.replace(".","");
       this.form.titre = this.form.titre.replace(".","");
-      alert(JSON.stringify(gaetan))
-      console.log(gaetan)
+      this.form.titre = this.form.titre.replace("/","");
       db.ref('Film:'+(this.form.titre) + ' '+ (this.form.id)+'/'+(""+this.form.email)+'/')
             .set(gaetan)
             .then(() => {
-            console.log('form send')
+            alert('formulaire envoyé avec succes')
         })
       
     },
@@ -162,7 +160,6 @@ export default {
       )
       .then(response => {
        this.results = response.data.results;
-       console.log(JSON.stringify(this.results[0]));
       });
 
   }
